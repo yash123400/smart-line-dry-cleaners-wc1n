@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Line Dry Cleaners - Premium Garment Care in London WC1N</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Vanilla Tilt for 3D effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        smartDark: '#0B132B',
+                        smartBlue: '#1C2541',
+                        smartTeal: '#3A506B',
+                        smartCyan: '#5BC0BE',
+                        backplate: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F8F9FA;
+            color: #0B132B;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .ghl-breakout {
+            width: 100vw !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            max-width: 100vw !important;
+            background-color: #F8F9FA !important;
+            overflow-x: hidden !important;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 19, 43, 0.8) 0%, rgba(28, 37, 65, 0.9) 100%);
+        }
+
+        .student-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+        }
+
+        /* 3D Glass Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            transform-style: preserve-3d;
+        }
+
+        .glass-card>* {
+            transform: translateZ(30px);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-smartCyan selection:text-white">
+
+    <!-- Top Student Banner -->
+    <div
+        class="fixed top-0 w-full z-50 student-gradient text-white py-2 px-4 text-center text-sm font-semibold tracking-wide shadow-md">
+        🎓 Students & OAP get 10% OFF all services! <a href="#student-booking"
+            class="underline hover:text-smartDark transition-colors">Book with Discount</a>
+    </div>
+
+    <div class="ghl-breakout pt-9">
+        <!-- Navigation -->
+        <header id="navbar"
+            class="fixed top-9 left-0 right-0 z-40 transition-all duration-300 px-6 md:px-12 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-10">
+                <a href="#" class="text-2xl font-black tracking-tight text-smartDark flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-smartCyan flex items-center justify-center text-white">
+                        <i data-feather="droplet" class="w-5 h-5"></i>
+                    </span>
+                    SMART LINE
+                </a>
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-smartTeal">
+                    <a href="#services" class="hover:text-smartCyan transition-colors">Services</a>
+                    <a href="#about" class="hover:text-smartCyan transition-colors">About</a>
+                    <a href="#contact" class="hover:text-smartCyan transition-colors">Contact</a>
+                </nav>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="tel:+442072784724"
+                    class="hidden md:flex items-center gap-2 text-sm font-bold text-smartDark hover:text-smartCyan transition-colors">
+                    <i data-feather="phone-call" class="w-4 h-4 text-smartCyan"></i>
+                    020 7278 4724
+                </a>
+                <a href="#contact"
+                    class="px-6 py-2.5 rounded-full bg-smartDark text-white text-sm font-bold hover:bg-smartBlue hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
+                    Book Pickup
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero with 3D elements -->
+            <section class="relative min-h-[90vh] flex items-center justify-center pt-24 pb-12 px-6 overflow-hidden">
+                <!-- Background Blobs for 3D depth -->
+                <div
+                    class="absolute top-0 -left-40 w-96 h-96 bg-smartCyan rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob">
+                </div>
+                <div
+                    class="absolute top-0 -right-40 w-96 h-96 bg-smartBlue rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000">
+                </div>
+                <div
+                    class="absolute -bottom-40 left-20 w-96 h-96 bg-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000">
+                </div>
+
+                <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full relative z-10">
+
+                    <!-- Text Content -->
+                    <div class="space-y-8">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-smartCyan/30 bg-smartCyan/10 text-smartTeal font-bold text-xs uppercase tracking-wider hidden sm:flex w-max">
+                            <span class="w-2 h-2 rounded-full bg-smartCyan animate-pulse"></span>
+                            WC1N's Premium Garment Care
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black text-smartDark leading-[1.1] tracking-tight">
+                            Smart care for <br />
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-smartBlue to-smartCyan">
+                                immaculate clothing.
+                            </span>
+                        </h1>
+                        <p class="text-lg md:text-xl text-smartTeal max-w-lg leading-relaxed font-medium">
+                            Located at 54 Coram Street, we provide high-end dry cleaning, expert tailoring, and complete
+                            household laundry services. Free delivery for orders over £80.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                            <a href="#contact"
+                                class="px-8 py-4 rounded-xl bg-smartCyan text-white text-center font-bold text-lg hover:shadow-[0_10px_30px_rgba(91,192,190,0.4)] hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                                Book Collection
+                            </a>
+                            <a href="#services"
+                                class="px-8 py-4 rounded-xl border border-smartTeal/20 text-smartTeal text-center font-bold text-lg hover:bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white/50 backdrop-blur-sm">
+                                Explore Services
+                            </a>
+                        </div>
+
+                        <div class="flex items-center gap-6 pt-6 border-t border-smartTeal/10">
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-5 h-5 text-smartCyan"></i>
+                                <span class="font-bold text-sm text-smartDark">Same-Day Available</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <i data-feather="check-circle" class="w-5 h-5 text-smartCyan"></i>
+                                <span class="font-bold text-sm text-smartDark">Free Local Pickup</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D Hero Visual -->
+                    <div class="relative w-full aspect-square md:aspect-[4/3] lg:aspect-square animate-float">
+                        <!-- Main Image in a 3D glass container -->
+                        <div
+                            class="absolute inset-0 rounded-[2rem] overflow-hidden shadow-2xl shadow-smartBlue/20 border-8 border-white transform rotate-3 z-10">
+                            <img src="assets/images/hero.jpg" alt="Premium Dry Cleaning"
+                                class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-smartBlue/10 mix-blend-overlay"></div>
+                        </div>
+                        <!-- Floating element 1 -->
+                        <div class="absolute -top-10 -right-10 w-40 h-40 glass-card rounded-2xl p-4 flex flex-col justify-center items-center z-20 border border-white"
+                            data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <i data-feather="scissors" class="w-10 h-10 text-smartCyan mb-2"></i>
+                            <span
+                                class="font-bold text-smartDark text-center text-sm leading-tight">Expert<br />Alterations</span>
+                        </div>
+                        <!-- Floating element 2 -->
+                        <div class="absolute -bottom-8 -left-8 glass-card rounded-2xl p-5 flex items-center gap-4 z-20 border border-white"
+                            data-tilt data-tilt-glare data-tilt-max-glare="0.5">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-xl">⭐
+                            </div>
+                            <div>
+                                <div class="font-black text-smartDark leading-none mb-1">4.8/5 Rating</div>
+                                <div class="text-xs font-semibold text-smartTeal uppercase tracking-widest">London
+                                    Choice</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 3D Interactive Services -->
+            <section id="services" class="py-24 px-6 md:px-12 bg-white relative">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                        <div>
+                            <span class="text-smartCyan font-bold tracking-widest uppercase text-sm mb-2 block">Our
+                                Expertise</span>
+                            <h2 class="text-4xl md:text-5xl font-black text-smartDark">Comprehensive <br /> Garment
+                                Care.</h2>
+                        </div>
+                        <p class="text-smartTeal max-w-md font-medium text-lg">
+                            We use advanced, eco-friendly solvents and decades of tailoring experience to restore your
+                            items to pristine condition.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Card 1 -->
+                        <div class="tilt-card rounded-[2rem] overflow-hidden bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-[450px] relative group cursor-pointer"
+                            data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.3">
+                            <div
+                                class="absolute inset-0 bg-smartDark/20 z-10 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <img src="assets/images/services.jpg"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                alt="Dry Cleaning">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-smartDark via-smartDark/80 to-transparent">
+                                <h3
+                                    class="text-2xl font-bold text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    Dry Cleaning</h3>
+                                <p
+                                    class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                    Same-day service for suits, dresses, and everyday business wear with premium
+                                    pressing.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="tilt-card rounded-[2rem] overflow-hidden bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-[450px] relative group cursor-pointer"
+                            data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.3">
+                            <div
+                                class="absolute inset-0 bg-smartDark/20 z-10 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <img src="assets/images/tailoring.jpg"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                alt="Tailoring">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-smartDark via-smartDark/80 to-transparent">
+                                <h3
+                                    class="text-2xl font-bold text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    Repairs & Alterations</h3>
+                                <p
+                                    class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                    Bespoke tailoring, zip replacements, tapering, and invisible mending done on-site.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="tilt-card rounded-[2rem] overflow-hidden bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-[450px] relative group cursor-pointer"
+                            data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+                            data-tilt-max-glare="0.3">
+                            <div
+                                class="absolute inset-0 bg-smartDark/20 z-10 group-hover:bg-transparent transition-colors duration-500">
+                            </div>
+                            <img src="assets/images/household.jpg"
+                                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                                alt="Household">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-smartDark via-smartDark/80 to-transparent">
+                                <h3
+                                    class="text-2xl font-bold text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                    Household & Leathers</h3>
+                                <p
+                                    class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                                    Curtains, duvets, sofa covers, plus specialist care for sheepskin, leather, and
+                                    suede.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Booking Banner -->
+            <section id="student-booking" class="py-16 px-6 md:px-12 bg-smartDark relative overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay">
+                </div>
+                <div
+                    class="max-w-5xl mx-auto glass-card border border-white/10 rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-10 relative z-10 bg-gradient-to-br from-smartBlue to-smartDark">
+                    <div class="flex-1 text-center md:text-left text-white">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs font-bold uppercase tracking-widest mb-4">
+                            🎓 Student Offer
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-black mb-4">Studying in London? We've got you covered.</h2>
+                        <p class="text-white/70 font-medium text-lg max-w-lg mx-auto md:mx-0">
+                            Present your Student ID or OAP card to receive an automatic <span
+                                class="text-yellow-400 font-bold">10% discount</span> on all dry cleaning and laundry
+                            services.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-auto shrink-0">
+                        <a href="#contact"
+                            class="block w-full text-center px-10 py-5 rounded-xl bg-white text-smartDark font-black text-lg hover:bg-yellow-400 hover:shadow-[0_10px_30px_rgba(250,204,21,0.3)] transition-all duration-300 transform hover:-translate-y-1">
+                            Claim 10% Discount
+                        </a>
+                        <p class="text-white/50 text-xs text-center mt-3 font-semibold">Valid in-store only. Must show
+                            valid ID.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-24 px-6 md:px-12 bg-white">
+                <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+                    <!-- Setup -->
+                    <div class="flex-1">
+                        <h2 class="text-4xl font-black text-smartDark mb-4">Find us in WC1N.</h2>
+                        <p class="text-smartTeal font-medium text-lg mb-10">
+                            Drop by our Coram Street location or arrange a free collection for orders over £80.
+                        </p>
+
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-smartCyan/10 flex flex-col items-center justify-center shrink-0">
+                                    <i data-feather="map-pin" class="text-smartCyan w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-smartDark text-lg mb-1">Location</h4>
+                                    <p class="text-smartTeal font-medium">54 Coram Street,<br />London, WC1N 1HB</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-smartCyan/10 flex flex-col items-center justify-center shrink-0">
+                                    <i data-feather="clock" class="text-smartCyan w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-smartDark text-lg mb-1">Opening Hours</h4>
+                                    <div class="text-smartTeal font-medium grid grid-cols-[100px_1fr] gap-x-4 gap-y-1">
+                                        <span>Mon - Fri:</span> <span>8:00 AM - 6:30 PM</span>
+                                        <span>Saturday:</span> <span>9:00 AM - 6:00 PM</span>
+                                        <span>Sunday:</span> <span class="text-red-400">Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-smartCyan/10 flex flex-col items-center justify-center shrink-0">
+                                    <i data-feather="phone" class="text-smartCyan w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-smartDark text-lg mb-1">Direct Line</h4>
+                                    <a href="tel:+442072784724"
+                                        class="text-smartCyan font-bold text-2xl hover:text-smartBlue transition-colors">020
+                                        7278 4724</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div
+                        class="flex-1 bg-gray-50 rounded-[2rem] p-8 md:p-12 border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                        <h3 class="text-2xl font-black text-smartDark mb-2">Book Collection</h3>
+                        <p class="text-smartTeal font-medium text-sm mb-8">Fill out the form below and we will contact
+                            you to confirm timing.</p>
+
+                        <form class="space-y-5"
+                            onsubmit="event.preventDefault(); alert('Booking request sent successfully!');">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-smartDark uppercase tracking-wider mb-2">First
+                                        Name</label>
+                                    <input type="text" required
+                                        class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-smartDark focus:border-smartCyan focus:ring-2 focus:ring-smartCyan/20 outline-none transition-all font-medium">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-smartDark uppercase tracking-wider mb-2">Phone
+                                        Number</label>
+                                    <input type="tel" required
+                                        class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-smartDark focus:border-smartCyan focus:ring-2 focus:ring-smartCyan/20 outline-none transition-all font-medium">
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-xs font-bold text-smartDark uppercase tracking-wider mb-2">Service
+                                    Required</label>
+                                <select
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-smartDark focus:border-smartCyan focus:ring-2 focus:ring-smartCyan/20 outline-none transition-all font-medium appearance-none">
+                                    <option>Standard Dry Cleaning</option>
+                                    <option>Repairs & Alterations</option>
+                                    <option>Household Item Cleaning</option>
+                                    <option>Student / OAP Discount Service</option>
+                                </select>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-4 bg-smartDark text-white font-bold rounded-xl hover:bg-smartBlue shadow-lg shadow-smartDark/20 hover:-translate-y-1 transition-all duration-300">
+                                Confirm Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-smartDark py-12 px-6 border-t border-white/10">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-white font-black tracking-tight text-xl flex items-center gap-2">
+                    <i data-feather="droplet" class="w-5 h-5 text-smartCyan"></i> Smart Line
+                </div>
+                <div class="text-white/50 text-sm font-medium">
+                    &copy; 2026 Smart Line Dry Cleaners. 54 Coram Street, WC1N 1HB.
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" aria-label="Facebook"
+                        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-smartCyan transition-colors"><i
+                            data-feather="facebook" class="w-4 h-4"></i></a>
+                    <a href="#" aria-label="Instagram"
+                        class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-smartCyan transition-colors"><i
+                            data-feather="instagram" class="w-4 h-4"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Initialization Scripts -->
+    <script>
+        // Init Feather
+        feather.replace();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('py-5');
+                nav.classList.add('py-3');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('py-5');
+                nav.classList.remove('py-3');
+            }
+        });
+
+        // Init Vanilla Tilt for 3D Cards
+        VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.4,
+        });
+
+        // GHL Breakout Fix
+        (function () {
+            var el = document.querySelector('.ghl-breakout');
+            if (!el) return;
+            var parent = el.parentElement;
+            while (parent && parent !== document.documentElement) {
+                parent.style.padding = '0';
+                parent.style.margin = '0';
+                parent.style.maxWidth = 'none';
+                parent.style.width = '100vw';
+                parent.style.backgroundColor = '#F8F9FA';
+                parent.style.overflow = 'visible';
+                parent = parent.parentElement;
+            }
+            document.documentElement.style.backgroundColor = '#F8F9FA';
+            document.body.style.backgroundColor = '#F8F9FA';
+        })();
+    </script>
+</body>
+
+</html>
